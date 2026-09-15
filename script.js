@@ -26,17 +26,17 @@ animatedItems.forEach(item => {
 
 const mainButton = document.querySelector('#mainBtn');
 if (mainButton) {
-    mainButton.addEventListener('click', () => alert('Форма расчета откроется скоро!'));
+    mainButton.addEventListener('click', () => alert('The payment form will open soon!'));
 }
 
 const worksButton = document.querySelector('#worksBtn');
 if (worksButton) {
-    worksButton.addEventListener('click', () => alert('Раздел в разработке!'));
+    worksButton.addEventListener('click', () => alert('The section is under development!'));
 }
 const catalogCalcBtns = document.querySelectorAll('.calc-btn');
 catalogCalcBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-        alert('Форма расчета для этого изделия готовится к запуску!');
+        alert('The calculation form for this product is being prepared for launch!');
     });
 });
 
@@ -57,21 +57,3 @@ faqHeaders.forEach(header => {
     });
 });
 
-const orderForm = document.querySelector('#orderForm');
-
-if (orderForm) {
-    orderForm.addEventListener('submit', (event) => {
-
-        event.preventDefault();
-
-        const name = document.querySelector('#userName').value;
-        const phone = document.querySelector('#userPhone').value;
-        const message = document.querySelector('#userMessage').value;
-
-        console.log(`Заявка получена! Имя: ${name}, Телефон: ${phone}, Сообщение: ${message}`);
-
-        alert(`Спасибо, ${name}! Ваша заявка успешно отправлена на расчет. Мастер-технолог свяжется с вами в течение 30 минут.`);
-
-        orderForm.reset();
-    });
-}
